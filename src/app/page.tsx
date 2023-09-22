@@ -53,7 +53,7 @@ const Hero = () => {
         {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
         <img
           style={{ width: '100%', position: 'absolute', bottom: 0 }}
-          src={`${prefix}/assets/images/MANSION-background.png`}
+          src={'/assets/images/MANSION-background.png'}
           alt="Ryft: A Timely Manor"
         />
         <Parallax
