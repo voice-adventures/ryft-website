@@ -1,10 +1,9 @@
 "use client"
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Libre_Baskerville } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import { prefix } from './prefix';
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
 const font = Libre_Baskerville({
