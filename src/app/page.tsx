@@ -4,6 +4,7 @@ import { Libre_Baskerville } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { prefix } from './prefix';
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
 const font = Libre_Baskerville({
@@ -52,7 +53,7 @@ const Hero = () => {
         {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
         <img
           style={{ width: '100%', position: 'absolute', bottom: 0 }}
-          src={'/assets/images/MANSION-background.png'}
+          src={`${prefix}/assets/images/MANSION-background.png`}
           alt="Ryft: A Timely Manor"
         />
         <Parallax
