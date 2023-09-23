@@ -52,7 +52,7 @@ const Hero = () => {
         {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
         <img
           style={{ width: '100%', position: 'absolute', bottom: 0 }}
-          src={'/ryft-website/assets/images/MANSION-background.png'}
+          src={'/assets/images/MANSION-background.png'}
           alt="Ryft: A Timely Manor"
         />
         <Parallax
@@ -63,7 +63,7 @@ const Hero = () => {
           scale={[1, 1.1]}
         >
           <img
-            src={'/ryft-website/assets/images/treeline.png'}
+            src={'/assets/images/treeline.png'}
             alt="Ryft: A Timely Manor"
           />
         </Parallax>
@@ -75,7 +75,7 @@ const Hero = () => {
           scale={[1, 1.4]}
         >
           <img
-            src={'/ryft-website/assets/images/MANSION-ground.png'}
+            src={'/assets/images/MANSION-ground.png'}
             alt="Ryft: A Timely Manor"
           />
         </Parallax>
@@ -88,7 +88,7 @@ const Hero = () => {
           translateX={['-150px', '-75px']}
         >
           <img
-            src={'/ryft-website/assets/images/lamppost.png'}
+            src={'/assets/images/lamppost.png'}
             alt="Ryft: A Timely Manor"
           />
         </Parallax>
@@ -102,7 +102,7 @@ const Hero = () => {
           translateY={['0px', '-200px']}
         >
           <img
-            src={'/ryft-website/assets/images/MANSION-left-tree.png'}
+            src={'/assets/images/MANSION-left-tree.png'}
             alt="Ryft: A Timely Manor"
           />
         </Parallax>
@@ -121,7 +121,7 @@ const Hero = () => {
           translateY={['0px', '-200px']}
         >
           <img
-            src={'/ryft-website/assets/images/MANSION-right-tree.png'}
+            src={'/assets/images/MANSION-right-tree.png'}
             alt="Ryft: A Timely Manor"
           />
         </Parallax>
@@ -144,7 +144,7 @@ const Hero = () => {
               <div className="logo-wrapper">
                 <img
                   className="logo"
-                  src={'/ryft-website/assets/images/RYFT_Logo_White.png'}
+                  src={'/assets/images/RYFT_Logo_White.png'}
                   alt="Ryft: A Timely Manor"
                 />
               </div>
