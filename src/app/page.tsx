@@ -126,7 +126,7 @@ const Hero = () => {
           />
         </Parallax>
         <Parallax
-          style={{ width: '100%', position: 'absolute', top: '25%' }}
+          style={{ width: '100%', position: 'absolute', top: '25%', opacity: 0 }}
           shouldAlwaysCompleteAnimation
           startScroll={600}
           endScroll={900}
