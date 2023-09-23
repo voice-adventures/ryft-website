@@ -96,9 +96,9 @@ const Hero = () => {
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{ width: '45%', position: 'absolute', bottom: '10%' }}
+          style={{ width: '130%', position: 'absolute', bottom: 0, left: -300}}
           scale={[1, 1.6]}
-          translateX={['50px', '-800px']}
+          translateX={['0px', '-800px']}
           translateY={['0px', '-200px']}
         >
           <img
@@ -111,13 +111,13 @@ const Hero = () => {
           endScroll={900}
           shouldAlwaysCompleteAnimation
           style={{
-            width: '40%',
+            width: '150%',
             position: 'absolute',
-            bottom: '15%',
-            right: 0,
+            bottom: 0,
+            right: -300,
           }}
           scale={[1, 1.6]}
-          translateX={['-50px', '800px']}
+          translateX={['0px', '800px']}
           translateY={['0px', '-200px']}
         >
           <img
