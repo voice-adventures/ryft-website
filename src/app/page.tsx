@@ -61,10 +61,14 @@ const Hero = () => {
         alignItems: 'center',
       }}
     >
-      <div style={{minWidth: 1400, position: 'absolute', bottom: 0, height: "100%", width: '100%',  alignSelf: 'center', left: '50%', transform: 'translateX(-50%)'}}>
-      {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
+      <div style={{minWidth: 1400, position: 'absolute', bottom: 0, height: "100%",  alignSelf: 'center', left: '50%', transform: 'translateX(-50%)'}}>
       <img
-        style={{ width: '100%', position: 'absolute', bottom: 0 }}
+        style={{ minWidth: '100vw', minHeight: "100vh", maxHeight: "100vh", maxWidth: 'none', position: 'relative'}}
+        src={IMAGES[0]}
+        alt="Ryft: A Timely Manor"
+      />
+      <img
+        style={{ minWidth: '100vw', minHeight: "100vh",  position: 'absolute', bottom: 0}}
         src={IMAGES[0]}
         alt="Ryft: A Timely Manor"
       />
