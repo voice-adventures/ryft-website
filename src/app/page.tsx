@@ -26,7 +26,7 @@ const Hero = () => {
   useEffect(() => {
     setVh(window.innerHeight)
     console.log('innerheight', window.innerHeight)
-    const loadImage = image => {
+    const loadImage = (image: string) => {
       return new Promise((resolve, reject) => {
         const loadImg = new Image()
         loadImg.src = image
