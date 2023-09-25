@@ -53,7 +53,7 @@ const Hero = () => {
           transform: 'translateX(-50%)',
           height: '100vh',
           width: '100vw',
-          minWidth: '1300px',
+          minWidth: '1376px',
           alignItems: 'center',
         }}
       >
