@@ -11,6 +11,8 @@ const font = Libre_Baskerville({
   weight: '400',
 });
 
+const IMAGES: string[] = ['/assets/images/MANSION-background.png', '/assets/images/treeline.png', '/assets/images/MANSION-ground.png', '/assets/images/lamppost.png', '/assets/images/MANSION-left-tree.png', '/assets/images/MANSION-right-tree.png']
+
 const Center = () => {
   return (
     <div style={{height: 500, width: "100%"}} />
@@ -18,21 +20,26 @@ const Center = () => {
 }
 
 const Hero = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [vh, setVh] = useState(0);
-
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
+  const [imgsLoaded, setImgsLoaded] = useState(false)
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
     setVh(window.innerHeight)
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    console.log('innerheight', window.innerHeight)
+    const loadImage = image => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image()
+        loadImg.src = image
+        // wait 2 seconds to simulate loading time
+        loadImg.onload = () => resolve(image.url)
+        loadImg.onerror = err => reject(err)
+      })
+    }
+
+    Promise.all(IMAGES.map(image => loadImage(image)))
+      .then(() => setImgsLoaded(true))
+      .catch(err => console.log("Failed to load images", err))
+  }, [])
 
 
 
@@ -45,134 +52,136 @@ const Hero = () => {
         alignItems: 'center',
       }}
     >
+      { imgsLoaded ? 
       <ParallaxBanner 
-        style={{
-          position: scrollPosition > 900 ? 'absolute' : 'fixed',
-          bottom: 0,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          height: '100vh',
-          width: '100vw',
-          minWidth: '1376px',
-          alignItems: 'center',
-        }}
+      style={{
+        position: 'sticky',
+        top: 0,
+        height: '100vh',
+        width: '100vw',
+        alignItems: 'center',
+      }}
+    >
+      <div style={{minWidth: 1400, position: 'absolute', bottom: 0, height: "100%", width: '100%',  alignSelf: 'center', left: '50%', transform: 'translateX(-50%)'}}>
+      {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
+      <img
+        style={{ width: '100%', position: 'absolute', bottom: 0 }}
+        src={IMAGES[0]}
+        alt="Ryft: A Timely Manor"
+      />
+      <ParallaxBannerLayer
+        startScroll={0}
+        endScroll={900}
+        shouldAlwaysCompleteAnimation
+        scale={[1, 1.1]}
       >
-        {/* <Parallax style={{position: 'relative', height: '100vh', width: '100vw'}} speed={-1000}> */}
         <img
-          style={{ width: '100%', position: 'absolute', bottom: 0 }}
-          src={'/assets/images/MANSION-background.png'}
+          style={{ position: 'absolute', bottom: '-7%' }}
+          src={IMAGES[1]}
           alt="Ryft: A Timely Manor"
         />
-        <ParallaxBannerLayer
-          startScroll={0}
-          endScroll={900}
-          shouldAlwaysCompleteAnimation
-          scale={[1, 1.1]}
+      </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        startScroll={0}
+        endScroll={900}
+        shouldAlwaysCompleteAnimation
+        scale={[1, 1.4]}
+      >
+        <img
+          style={{ position: 'absolute', bottom: 0, width: '100%' }}
+          src={IMAGES[2]}
+          alt="Ryft: A Timely Manor"
+        />
+      </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        startScroll={0}
+        endScroll={900}
+        shouldAlwaysCompleteAnimation
+        scale={[1, 1.6]}
+        translateX={['0px', '40px']}
+      >
+        <img
+          style={{ width: '60%', position: 'absolute', bottom: '2%', right: '150px' }}
+          src={IMAGES[3]}
+          alt="Ryft: A Timely Manor"
+        />
+      </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        startScroll={0}
+        endScroll={900}
+        shouldAlwaysCompleteAnimation
+        scale={[1, 1.25]}
+        translateX={['0px', '-700px']}
+        translateY={['0px', '-200px']}
+      >
+        <img
+          style={{ position: 'absolute', bottom: 0, left: '-250px'}}
+          src={IMAGES[4]}
+          alt="Ryft: A Timely Manor"
+        />
+      </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        startScroll={0}
+        endScroll={900}
+        shouldAlwaysCompleteAnimation
+        scale={[1, 1.25]}
+        translateX={['0px', '700px']}
+        translateY={['0px', '-200px']}
+      >
+        <img
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            width: "100%",
+            right: '-300px',
+          }}
+          src={IMAGES[5]}
+          alt="Ryft: A Timely Manor"
+        />
+      </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        style={{ width: '100%', position: 'absolute', top: '25%', opacity: 0 }}
+        shouldAlwaysCompleteAnimation
+        startScroll={600}
+        endScroll={900}
+        opacity={[0, 1]}
+      >
+        <div
+          style={{
+            alignItems: 'center',
+            width: '100%',
+            position: 'absolute',
+          }}
         >
-          <img
-            style={{ position: 'absolute', bottom: '-7%' }}
-            src={'/assets/images/treeline.png'}
-            alt="Ryft: A Timely Manor"
-          />
-        </ParallaxBannerLayer>
-        <ParallaxBannerLayer
-          startScroll={0}
-          endScroll={900}
-          shouldAlwaysCompleteAnimation
-          scale={[1, 1.4]}
-        >
-          <img
-            style={{ position: 'absolute', bottom: 0, width: '100%' }}
-            src={'/assets/images/MANSION-ground.png'}
-            alt="Ryft: A Timely Manor"
-          />
-        </ParallaxBannerLayer>
-        <ParallaxBannerLayer
-          startScroll={0}
-          endScroll={900}
-          shouldAlwaysCompleteAnimation
-          scale={[1, 1.6]}
-          translateX={['0px', '40px']}
-        >
-          <img
-            style={{ width: '60%', position: 'absolute', bottom: '2%', right: '150px' }}
-            src={'/assets/images/lamppost.png'}
-            alt="Ryft: A Timely Manor"
-          />
-        </ParallaxBannerLayer>
-        <ParallaxBannerLayer
-          startScroll={0}
-          endScroll={900}
-          shouldAlwaysCompleteAnimation
-          scale={[1, 1.25]}
-          translateX={['0px', '-700px']}
-          translateY={['0px', '-200px']}
-        >
-          <img
-            style={{ position: 'absolute', bottom: 0, left: '-250px'}}
-            src={'/assets/images/MANSION-left-tree.png'}
-            alt="Ryft: A Timely Manor"
-          />
-        </ParallaxBannerLayer>
-        <ParallaxBannerLayer
-          startScroll={0}
-          endScroll={900}
-          shouldAlwaysCompleteAnimation
-          scale={[1, 1.25]}
-          translateX={['0px', '700px']}
-          translateY={['0px', '-200px']}
-        >
-          <img
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              width: "100%",
-              right: '-300px',
-            }}
-            src={'/assets/images/MANSION-right-tree.png'}
-            alt="Ryft: A Timely Manor"
-          />
-        </ParallaxBannerLayer>
-        <ParallaxBannerLayer
-          style={{ width: '100%', position: 'absolute', top: '25%', opacity: 0 }}
-          shouldAlwaysCompleteAnimation
-          startScroll={600}
-          endScroll={900}
-          opacity={[0, 1]}
-        >
-          <div
-            style={{
-              alignItems: 'center',
-              width: '100%',
-              position: 'absolute',
-            }}
-          >
-            <div className="pb-6">
-              <div className="logo-wrapper">
-                <img
-                  className="logo"
-                  src={'/assets/images/RYFT_Logo_White.png'}
-                  alt="Ryft: A Timely Manor"
-                />
-              </div>
-              <div className="">
-                <div className="line" />
-                <div
-                  className={`ryft-part part-i text-center text-2xl ${font.className}`}
-                >
-                  Part XVII
-                </div>
-              </div>
+          <div className="pb-6">
+            <div className="logo-wrapper">
+              <img
+                className="logo"
+                src={'/assets/images/RYFT_Logo_White.png'}
+                alt="Ryft: A Timely Manor"
+              />
+            </div>
+            <div className="">
+              <div className="line" />
               <div
-                className={`ryft-subtitle text-center text-3xl  ${font.className}`}
+                className={`ryft-part part-i text-center text-2xl ${font.className}`}
               >
-                AN ENDLESS MANOR
+                Part I
               </div>
             </div>
+            <div
+              className={`ryft-subtitle text-center text-3xl  ${font.className}`}
+            >
+              A TIMELY MANOR
+            </div>
           </div>
-        </ParallaxBannerLayer>
-        {/* </Parallax> */}
-      </ParallaxBanner>
+        </div>
+      </ParallaxBannerLayer>
+      </div>
+    </ParallaxBanner>
+      
+      : null }
+      
     </div>
   );
 };
