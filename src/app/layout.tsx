@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'RYFT',
     images: [
       {
-        url: 'https://ryftgame.com/og.png',
+        url: 'https://ryftgame.com/og.webp',
         width: 1814,
         height: 1214,
       },
