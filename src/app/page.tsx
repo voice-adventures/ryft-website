@@ -2,7 +2,6 @@
 // import Image from 'next/image'
 import { Libre_Baskerville } from 'next/font/google';
 import { useEffect, useState, useLayoutEffect } from 'react';
-import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
@@ -11,7 +10,7 @@ const font = Libre_Baskerville({
   weight: '400',
 });
 
-const IMAGES: string[] = ['/assets/images/MANSION-background.png', '/assets/images/treeline.png', '/assets/images/MANSION-ground.png', '/assets/images/lamppost.png', '/assets/images/MANSION-left-tree.png', '/assets/images/MANSION-right-tree.png']
+const IMAGES: string[] = ['/assets/images/MANSION-background.webp', '/assets/images/treeline.webp', '/assets/images/MANSION-ground.webp', '/assets/images/lamppost.webp', '/assets/images/MANSION-left-tree.webp', '/assets/images/MANSION-right-tree.webp']
 
 const Center = () => {
   return (
