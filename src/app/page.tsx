@@ -1,9 +1,9 @@
 "use client"
 // import Image from 'next/image'
 import { Libre_Baskerville } from 'next/font/google';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
 const font = Libre_Baskerville({
@@ -11,41 +11,49 @@ const font = Libre_Baskerville({
   weight: '400',
 });
 
+const Center = () => {
+  return (
+    <div style={{height: 500, width: "100%"}} />
+  )
+}
+
 const Hero = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [vh, setVh] = useState(0);
+
   const handleScroll = () => {
     const position = window.scrollY;
     setScrollPosition(position);
-    console.log('scroll position', position);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-
+    setVh(window.innerHeight)
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+
+
   return (
     <div
       style={{
-        height: '2700px',
+        height: `${vh + 900}px`,
         maxWidth: '100vw',
         position: 'relative',
         alignItems: 'center',
       }}
     >
-      <div
+      <ParallaxBanner 
         style={{
-          position: scrollPosition > 900 ? 'relative' : 'fixed',
+          position: scrollPosition > 900 ? 'absolute' : 'fixed',
           bottom: 0,
           left: '50%',
           transform: 'translateX(-50%)',
           height: '100vh',
           width: '100vw',
-          minWidth: 1300,
-          marginTop: scrollPosition > 900 ? '900px' : 0,
+          minWidth: '1300px',
           alignItems: 'center',
         }}
       >
@@ -55,77 +63,77 @@ const Hero = () => {
           src={'/assets/images/MANSION-background.png'}
           alt="Ryft: A Timely Manor"
         />
-        <Parallax
+        <ParallaxBannerLayer
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{ position: 'absolute', bottom: '-5%' }}
           scale={[1, 1.1]}
         >
           <img
+            style={{ position: 'absolute', bottom: '-7%' }}
             src={'/assets/images/treeline.png'}
             alt="Ryft: A Timely Manor"
           />
-        </Parallax>
-        <Parallax
+        </ParallaxBannerLayer>
+        <ParallaxBannerLayer
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{ position: 'absolute', bottom: 0 }}
           scale={[1, 1.4]}
         >
           <img
+            style={{ position: 'absolute', bottom: 0, width: '100%' }}
             src={'/assets/images/MANSION-ground.png'}
             alt="Ryft: A Timely Manor"
           />
-        </Parallax>
-        <Parallax
+        </ParallaxBannerLayer>
+        <ParallaxBannerLayer
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{ width: '60%', position: 'absolute', bottom: '1%', right: 0 }}
-          scale={[1, 1.5]}
-          translateX={['-150px', '-75px']}
+          scale={[1, 1.6]}
+          translateX={['0px', '40px']}
         >
           <img
+            style={{ width: '60%', position: 'absolute', bottom: '2%', right: '150px' }}
             src={'/assets/images/lamppost.png'}
             alt="Ryft: A Timely Manor"
           />
-        </Parallax>
-        <Parallax
+        </ParallaxBannerLayer>
+        <ParallaxBannerLayer
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{ width: '130%', position: 'absolute', bottom: 0, left: -300}}
-          scale={[1, 1.6]}
-          translateX={['0px', '-800px']}
+          scale={[1, 1.25]}
+          translateX={['0px', '-700px']}
           translateY={['0px', '-200px']}
         >
           <img
+            style={{ position: 'absolute', bottom: 0, left: '-250px'}}
             src={'/assets/images/MANSION-left-tree.png'}
             alt="Ryft: A Timely Manor"
           />
-        </Parallax>
-        <Parallax
+        </ParallaxBannerLayer>
+        <ParallaxBannerLayer
           startScroll={0}
           endScroll={900}
           shouldAlwaysCompleteAnimation
-          style={{
-            width: '150%',
-            position: 'absolute',
-            bottom: 0,
-            right: -300,
-          }}
-          scale={[1, 1.6]}
-          translateX={['0px', '800px']}
+          scale={[1, 1.25]}
+          translateX={['0px', '700px']}
           translateY={['0px', '-200px']}
         >
           <img
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              width: "100%",
+              right: '-300px',
+            }}
             src={'/assets/images/MANSION-right-tree.png'}
             alt="Ryft: A Timely Manor"
           />
-        </Parallax>
-        <Parallax
+        </ParallaxBannerLayer>
+        <ParallaxBannerLayer
           style={{ width: '100%', position: 'absolute', top: '25%', opacity: 0 }}
           shouldAlwaysCompleteAnimation
           startScroll={600}
@@ -137,7 +145,6 @@ const Hero = () => {
               alignItems: 'center',
               width: '100%',
               position: 'absolute',
-              top: '50%',
             }}
           >
             <div className="pb-6">
@@ -163,9 +170,9 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </Parallax>
+        </ParallaxBannerLayer>
         {/* </Parallax> */}
-      </div>
+      </ParallaxBanner>
     </div>
   );
 };
@@ -177,6 +184,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <ParallaxProvider>
         <Hero />
+        <Center />
       </ParallaxProvider>
 
     </main>
