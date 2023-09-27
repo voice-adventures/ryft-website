@@ -1,5 +1,5 @@
 "use client"
-// import Image from 'next/image'
+import Link from 'next/link'
 import { Libre_Baskerville, Kadwa } from 'next/font/google';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
@@ -185,6 +185,7 @@ const Hero = () => {
         opacity={[0, 1]}
       >
         <div
+          className='content-center'
           style={{
             alignItems: 'center',
             width: '100%',
@@ -215,6 +216,28 @@ const Hero = () => {
           </div>
         </div>
       </ParallaxBannerLayer>
+      <ParallaxBannerLayer
+        opacity={[0, 1]}
+        startScroll={600}
+        endScroll={900} >
+      <div className="flex flex-row flex-wrap p-4 w-1/2" style={{background: '#131017', transform: 'translate(-50%)', left: '50%', position: 'absolute', bottom: 0, borderTopLeftRadius: 30, borderTopRightRadius: 30}}>
+        <div className='text-3xl justify-center' style={{margin: 'auto 20px', flex: 2}}>Join our open beta: </div>
+        <Link href="https://testflight.apple.com/join/KcLyBhjj" style={{flex: 1,  margin: '0 auto'}} >
+            <img
+                className="play-button my-2 md:mr-2 h-10"
+                src={'/assets/images/Apple_logo_white.svg'}
+                alt="Get it on Google Play"
+            />
+        </Link>
+        <Link href="https://drive.google.com/file/d/1wy-3Tj8WdIeYdQLU0R0eVWSl83GLPoFC/view?usp=sharing" style={{flex: 1, margin: '0 auto'}} className='justify-center'>
+          <img
+          className="app-button my-2 h-10"
+          src={'/assets/images/Android_Robot.svg'}
+          alt="Download on the App Store"
+          />
+        </Link>
+        </div>
+      </ParallaxBannerLayer> 
       </div>
     </ParallaxBanner>
       
@@ -237,3 +260,20 @@ export default function Home() {
     </main>
   )
 }
+
+//Will use when we have links to appstores
+
+// <div className="lg:h-18 flex h-16 w-1/2 justify-center sm:w-full md:h-16 md:w-1/2 md:justify-start">
+              //   <img
+              //     className="play-button my-2 md:mr-2"
+              //     src={'/assets/images/google-play-badge.png'}
+              //     alt="Get it on Google Play"
+              //   />
+              // </div>
+              // <Link href="https://testflight.apple.com/join/KcLyBhjj" className="lg:h-18 flex h-16  w-1/2 content-center justify-center sm:w-full md:h-16 md:w-1/2 md:justify-end">
+              //   <img
+              //     className="app-button my-2"
+              //     src={'/assets/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'}
+              //     alt="Download on the App Store"
+              //   />
+              // </Link> */}
