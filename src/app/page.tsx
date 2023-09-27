@@ -78,8 +78,9 @@ const Hero = () => {
 
 
   return (
-    <div className='w-screen overflow-x-hidden'>
-    <img height={"100vh"} src={'/og.webp'} className='md:hidden mainImage' />
+    <div className='w-screen'>
+    <div className='w-screen overflow-x-hidden md:hidden'>
+    <img height={"100vh"} src={'/og.webp'} className='mainImage' />
     <div
       className='md:hidden'
         style={{ width: '100%', position: 'absolute', top: '25%' }}
@@ -115,8 +116,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+    </div>
     <div
-      className='mainParallax hidden md:flex md:h-0'
+      className='mainParallax hidden md:block'
       style={{
         height: `${vh + 900}px`,
         maxWidth: '100vw',
