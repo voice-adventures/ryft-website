@@ -26,7 +26,7 @@ const Center = () => {
   return (
     <div style={{background: 'white'}}>
     <div className='contentWrapper' >
-      <div className='tagline md:text-5xl md:pb-15'>
+      <div className='tagline md:text-5xl md:pb-15 md:px-[10%]'>
       AN AUDIO & VOICE MYSTERY ADVENTURE
       </div>
       <div className='flex flex-col lg:flex-row rowWrapper md:px-[10%] '>
