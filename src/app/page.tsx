@@ -26,18 +26,18 @@ const Center = () => {
   return (
     <div style={{background: 'white'}}>
     <div className='contentWrapper' >
-      <div className='tagline md:text-5xl'>
+      <div className='tagline md:text-5xl md:pb-15'>
       AN AUDIO & VOICE MYSTERY ADVENTURE
       </div>
-      <div className='flex flex-col lg:flex-row rowWrapper '>
+      <div className='flex flex-col lg:flex-row rowWrapper md:px-[10%] '>
         <div className='lg:mr-24 lg:text-left copyContainer'>
-          <div className='text lg:text-left'>
+          <div className='text lg:text-left md:text-[22px] '>
             {mainCopy}
           </div>
-          <div className='subheader lg:text-left'>
+          <div className='subheader lg:text-left md:text-3xl'>
           HANDS-FREE TO EXPLORE
           </div>
-          <div className='text lg:text-left'>
+          <div className='text lg:text-left md:text-[22px]'>
             {subHeaderCopy}
           </div>
         </div>
@@ -93,9 +93,9 @@ const Hero = () => {
           }}
         >
           <div className="pb-6">
-            <div className="logo-wrapper">
+            <div className="logo-wrapper h-16 sm:h-36">
               <img
-                className="logo w-12"
+                className="w-60 sm:w-96 logo"
                 src={'/assets/images/RYFT_Logo_White.png'}
                 alt="Ryft: A Timely Manor"
               />
@@ -103,13 +103,13 @@ const Hero = () => {
             <div className="">
               <div className="line" />
               <div
-                className={`ryft-part part-i md:text-2xl text-center text-xl ${font.className}`}
+                className={`ryft-part part-i sm:text-2xl text-center text-l ${font.className}`}
               >
                 Part I
               </div>
             </div>
             <div
-              className={`ryft-subtitle text-center md:text-3xl text-2xl  ${font.className}`}
+              className={`ryft-subtitle text-center sm:text-3xl text-xl  ${font.className}`}
             >
               A TIMELY MANOR
             </div>
@@ -232,14 +232,14 @@ const Hero = () => {
           }}
         >
           <div className="pb-6">
-            <div className="logo-wrapper">
+            <div className="logo-wrapper h-36">
               <img
-                className="logo"
+                className="logo w-96"
                 src={'/assets/images/RYFT_Logo_White.png'}
                 alt="Ryft: A Timely Manor"
               />
             </div>
-            <div className="">
+            <div>
               <div className="line" />
               <div
                 className={`ryft-part part-i text-center text-2xl ${font.className}`}
