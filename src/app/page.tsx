@@ -26,23 +26,23 @@ const Center = () => {
   return (
     <div style={{background: 'white'}}>
     <div className='contentWrapper' >
-      <div className='tagline'>
+      <div className='tagline md:text-5xl'>
       AN AUDIO & VOICE MYSTERY ADVENTURE
       </div>
-      <div className='rowWrapper'>
-        <div className='copyContainer'>
-          <div className='text'>
+      <div className='flex flex-col lg:flex-row rowWrapper '>
+        <div className='lg:mr-24 lg:text-left copyContainer'>
+          <div className='text lg:text-left'>
             {mainCopy}
           </div>
-          <div className='subheader'>
+          <div className='subheader lg:text-left'>
           HANDS-FREE TO EXPLORE
           </div>
-          <div className='text'>
+          <div className='text lg:text-left'>
             {subHeaderCopy}
           </div>
         </div>
-        <div className='imageWrapper'>
-          <img src={'/assets/images/Game.gif'} width="300px" style={{borderRadius: 30}}/>
+        <div className='imageWrapper justify-center'>
+          <img src={'/assets/images/Game.gif'} width="300px" style={{borderRadius: 30, margin: 'auto'}}/>
         </div>
       </div>
       <div style={{width: '100%', height: '100vh'}} />
@@ -78,12 +78,50 @@ const Hero = () => {
 
 
   return (
+    <div className='w-screen overflow-x-hidden'>
+    <img height={"100vh"} src={'/og.webp'} className='md:hidden mainImage' />
     <div
+      className='md:hidden'
+        style={{ width: '100%', position: 'absolute', top: '25%' }}
+      >
+        <div
+          style={{
+            alignItems: 'center',
+            width: '100%',
+            position: 'absolute',
+          }}
+        >
+          <div className="pb-6">
+            <div className="logo-wrapper">
+              <img
+                className="logo w-12"
+                src={'/assets/images/RYFT_Logo_White.png'}
+                alt="Ryft: A Timely Manor"
+              />
+            </div>
+            <div className="">
+              <div className="line" />
+              <div
+                className={`ryft-part part-i md:text-2xl text-center text-xl ${font.className}`}
+              >
+                Part I
+              </div>
+            </div>
+            <div
+              className={`ryft-subtitle text-center md:text-3xl text-2xl  ${font.className}`}
+            >
+              A TIMELY MANOR
+            </div>
+          </div>
+        </div>
+      </div>
+    <div
+      className='mainParallax hidden md:flex md:h-0'
       style={{
         height: `${vh + 900}px`,
         maxWidth: '100vw',
         position: 'relative',
-        alignItems: 'center',
+        // alignItems: 'center',
       }}
     >
       { imgsLoaded ? 
@@ -185,7 +223,6 @@ const Hero = () => {
         opacity={[0, 1]}
       >
         <div
-          className='content-center'
           style={{
             alignItems: 'center',
             width: '100%',
@@ -243,6 +280,7 @@ const Hero = () => {
       
       : null }
       
+    </div>
     </div>
   );
 };
