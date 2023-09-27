@@ -187,3 +187,15 @@ body {
   margin-left: 50%;
   transform: translate(-50%);
 }
+
+.copywrite {
+  color: #FFF;
+  font-family: var(--font-kadwa);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 20px;
+}

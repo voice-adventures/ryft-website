@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Libre_Baskerville, Kadwa } from 'next/font/google';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import Copywrite from './Components/Copywrite';
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
 const font = Libre_Baskerville({
@@ -46,8 +47,7 @@ const Center = () => {
         </div>
       </div>
       <div style={{width: '100%', height: '100vh'}} />
-      <div style={{width: '100%', height: '100vh'}} />
-      <div style={{width: '100%', height: '100vh'}} />
+      <Copywrite />
     </div>
     </div>
   )
@@ -296,7 +296,6 @@ export default function Home() {
         <Hero />
         <Center />
       </ParallaxProvider>
-
     </main>
   )
 }
