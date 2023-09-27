@@ -102,5 +102,67 @@ body {
 .part-i {
   margin-left: 1rem;
   margin-right: 1rem;
+}
 
+.tagline {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* gap: 35px; */
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-kadwa);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 60px */
+  letter-spacing: 8px;
+  padding: 90px 10%;
+  padding-bottom: 60px;
+}
+
+.text {
+  color: #FFF;
+  font-family: var(--font-kadwa);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; 
+  letter-spacing: 1.25px;
+}
+
+.subheader {
+  color: #FFF;
+  font-family: var(--font-kadwa);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 36px */
+  letter-spacing: 4.8px;
+  padding: 35px 0;
+}
+
+.rowWrapper {
+  display: flex;
+  padding: 0px 10%;
+  flex-direction: row;
+}
+
+.copyContainer {
+  flex: 2;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center;  */
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.contentWrapper {
+  width: 100%;
+  background: linear-gradient(180deg, #131017 33.52%, rgba(92, 92, 92, 0.65) 57.29%, rgba(255, 255, 255, 0.00) 74.48%, #141018 96.87%);
 }

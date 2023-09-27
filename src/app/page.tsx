@@ -1,6 +1,6 @@
 "use client"
 // import Image from 'next/image'
-import { Libre_Baskerville } from 'next/font/google';
+import { Libre_Baskerville, Kadwa } from 'next/font/google';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 // import background from ''
@@ -10,11 +10,46 @@ const font = Libre_Baskerville({
   weight: '400',
 });
 
+const kadwaFont = Kadwa({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-kadwa',
+});
+
+
+const mainCopy = "Welcome to the Nexus Manor. A place that exists outside of time —and in between your ears. RYFT is an audio-based adventure game played with speech commands. Featuring a full voice cast, challenging puzzles, and a compelling narrative, this mystery game is powered by the world's greatest graphics engine: your imagination."
+const subHeaderCopy = "Navigate freely. Pick-up and combine items to solve puzzles. Chat with an eccentric cast of characters as you attempt to solve the mystery of the manor without ever lifting a finger."
+
 const IMAGES: string[] = ['/assets/images/MANSION-background.webp', '/assets/images/treeline.webp', '/assets/images/MANSION-ground.webp', '/assets/images/lamppost.webp', '/assets/images/MANSION-left-tree.webp', '/assets/images/MANSION-right-tree.webp']
 
 const Center = () => {
   return (
-    <div style={{height: 500, width: "100%"}} />
+    <div style={{background: 'white'}}>
+    <div className='contentWrapper' >
+      <div className='tagline'>
+      AN AUDIO & VOICE MYSTERY ADVENTURE
+      </div>
+      <div className='rowWrapper'>
+        <div className='copyContainer'>
+          <div className='text'>
+            {mainCopy}
+          </div>
+          <div className='subheader'>
+          HANDS-FREE TO EXPLORE
+          </div>
+          <div className='text'>
+            {subHeaderCopy}
+          </div>
+        </div>
+        <div className='imageWrapper'>
+          <img src={'/assets/images/Game.gif'} width="300px" style={{borderRadius: 30}}/>
+        </div>
+      </div>
+      <div style={{width: '100%', height: '100vh'}} />
+      <div style={{width: '100%', height: '100vh'}} />
+      <div style={{width: '100%', height: '100vh'}} />
+    </div>
+    </div>
   )
 }
 
