@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { Libre_Baskerville, Kadwa } from 'next/font/google';
+import { Libre_Baskerville, Kadwa, Inter } from 'next/font/google';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import Copywrite from './Components/Copywrite';
@@ -9,6 +9,7 @@ import Copywrite from './Components/Copywrite';
 const font = Libre_Baskerville({
   subsets: ['latin'],
   weight: '400',
+  variable: '--font-libre',
 });
 
 const kadwaFont = Kadwa({
@@ -17,11 +18,31 @@ const kadwaFont = Kadwa({
   variable: '--font-kadwa',
 });
 
+const interFont = Inter({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-inter',
+});
+
 
 const mainCopy = "Welcome to the Nexus Manor. A place that exists outside of time —and in between your ears. RYFT is an audio-based adventure game played with speech commands. Featuring a full voice cast, challenging puzzles, and a compelling narrative, this mystery game is powered by the world's greatest graphics engine: your imagination."
 const subHeaderCopy = "Navigate freely. Pick-up and combine items to solve puzzles. Chat with an eccentric cast of characters as you attempt to solve the mystery of the manor without ever lifting a finger."
 
 const IMAGES: string[] = ['/assets/images/MANSION-background.webp', '/assets/images/treeline.webp', '/assets/images/MANSION-ground.webp', '/assets/images/lamppost.webp', '/assets/images/MANSION-left-tree.webp', '/assets/images/MANSION-right-tree.webp']
+
+const JoinButton = ({url, imageSrc, altText}:{url: string, imageSrc: string, altText: string}) => (
+  <Link href={url} className="buttonStyles">
+      <div className={`text-white text-base button-text ${interFont.className}`}>JOIN THE BETA</div>
+      <div className="relative flex-col justify-start items-start flex ml-2">
+        <img
+            className='w-6'
+            src={imageSrc}
+            alt={altText}
+        />
+      </div>
+</Link>
+)
+
 
 const Center = () => {
   return (
@@ -52,6 +73,8 @@ const Center = () => {
     </div>
   )
 }
+
+
 
 const Hero = () => {
   const [vh, setVh] = useState(0);
@@ -222,7 +245,7 @@ const Hero = () => {
         shouldAlwaysCompleteAnimation
         startScroll={600}
         endScroll={900}
-        opacity={[0, 1]}
+        opacity={[1, 1]}
       >
         <div
           style={{
@@ -253,9 +276,22 @@ const Hero = () => {
               A TIMELY MANOR
             </div>
           </div>
-        </div>
+        <div className='mx-auto w-1/2 flex-row flex gap-4 justify-center mt-10'>
+        <JoinButton
+          url="https://testflight.apple.com/join/KcLyBhjj"
+          imageSrc='/assets/images/Apple_logo_white.svg'
+          altText="Join the beta"
+        />
+        <JoinButton
+          url="https://testflight.apple.com/join/KcLyBhjj"
+          imageSrc='/assets/images/Android_logo.png'
+          altText="Join the beta"
+        />
+         </div>
+
+       </div>
       </ParallaxBannerLayer>
-      <ParallaxBannerLayer
+      {/* <ParallaxBannerLayer
         opacity={[0, 1]}
         startScroll={600}
         endScroll={900} >
@@ -276,7 +312,7 @@ const Hero = () => {
           />
         </Link>
         </div>
-      </ParallaxBannerLayer> 
+      </ParallaxBannerLayer>  */}
       </div>
     </ParallaxBanner>
       

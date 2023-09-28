@@ -199,3 +199,22 @@ body {
   text-align: center;
   padding-bottom: 20px;
 }
+
+.buttonStyles {
+  display: flex;
+  padding: 12px 22px;
+  align-items: center;
+  width: 226px;
+  gap: 10px;
+  border-radius: 30px;
+  border: 2px solid var(--White, #FFF);
+  background: var(--Black, #000);
+}
+
+.button-text{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 178.571% */
+  letter-spacing: 0.62px;
+}
