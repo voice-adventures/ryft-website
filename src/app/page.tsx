@@ -67,7 +67,7 @@ const Center = () => {
           <img src={'/assets/images/Game.gif'} width="300px" style={{borderRadius: 30, margin: 'auto'}}/>
         </div>
       </div>
-      <div style={{width: '100%', height: '100vh'}} />
+      <div style={{width: '100%', height: '20vh'}} />
       <Copywrite />
     </div>
     </div>
