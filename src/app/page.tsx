@@ -144,7 +144,7 @@ const Hero = () => {
           altText="Join the beta"
         />
         <JoinButton
-          url="https://testflight.apple.com/join/KcLyBhjj"
+          url="https://drive.google.com/file/d/1wy-3Tj8WdIeYdQLU0R0eVWSl83GLPoFC/view?usp=drive_link"
           imageSrc='/assets/images/Android_logo.png'
           altText="Join the beta"
         />
@@ -295,7 +295,7 @@ const Hero = () => {
           altText="Join the beta"
         />
         <JoinButton
-          url="https://testflight.apple.com/join/KcLyBhjj"
+          url="https://drive.google.com/file/d/1wy-3Tj8WdIeYdQLU0R0eVWSl83GLPoFC/view?usp=drive_link"
           imageSrc='/assets/images/Android_logo.png'
           altText="Join the beta"
         />
