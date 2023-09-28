@@ -204,9 +204,8 @@ body {
 
 .buttonStyles {
   display: flex;
-  padding: 12px 22px;
+  padding: 10px 22px;
   align-items: center;
-  width: 226px;
   gap: 10px;
   border-radius: 30px;
   border: 2px solid var(--White, #FFF);
