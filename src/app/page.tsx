@@ -137,7 +137,7 @@ const Hero = () => {
               A TIMELY MANOR
             </div>
           </div>
-          <div className='mx-auto w-1/2 flex-col flex gap-4 justify-center mt-10'>
+          <div className='mx-auto w-56 flex-col flex gap-4 justify-center align-center mt-10'>
         <JoinButton
           url="https://testflight.apple.com/join/KcLyBhjj"
           imageSrc='/assets/images/Apple_logo_white.svg'
