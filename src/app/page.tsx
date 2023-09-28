@@ -137,6 +137,18 @@ const Hero = () => {
               A TIMELY MANOR
             </div>
           </div>
+          <div className='mx-auto w-1/2 flex-col flex gap-4 justify-center mt-10'>
+        <JoinButton
+          url="https://testflight.apple.com/join/KcLyBhjj"
+          imageSrc='/assets/images/Apple_logo_white.svg'
+          altText="Join the beta"
+        />
+        <JoinButton
+          url="https://testflight.apple.com/join/KcLyBhjj"
+          imageSrc='/assets/images/Android_logo.png'
+          altText="Join the beta"
+        />
+         </div>
         </div>
       </div>
     </div>
@@ -245,7 +257,7 @@ const Hero = () => {
         shouldAlwaysCompleteAnimation
         startScroll={600}
         endScroll={900}
-        opacity={[1, 1]}
+        opacity={[0, 1]}
       >
         <div
           style={{
