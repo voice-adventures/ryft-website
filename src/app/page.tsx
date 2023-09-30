@@ -102,8 +102,8 @@ const Hero = () => {
 
   return (
     <div className='w-screen'>
-    <div className='w-screen overflow-x-hidden md:hidden'>
-    <img height={"100vh"} src={'/og.webp'} className='mainImage' />
+      <div className='w-screen overflow-x-hidden md:hidden min-h-[500px]'>
+        <img height={"100vh"} src={'/og.webp'} className='mainImage' />
     <div
       className='md:hidden'
         style={{ width: '100%', position: 'absolute', top: '25%' }}
@@ -113,6 +113,7 @@ const Hero = () => {
             alignItems: 'center',
             width: '100%',
             position: 'absolute',
+            minWidth: "270px",
           }}
         >
           <div className="pb-6">
@@ -137,7 +138,7 @@ const Hero = () => {
               A TIMELY MANOR
             </div>
           </div>
-          <div className='mx-auto flex-col flex gap-4 justify-center items-center mt-10'>
+          <div className='mx-auto flex-col sm:flex-row flex gap-4 justify-center items-center mt-10'>
         <JoinButton
           url="https://testflight.apple.com/join/KcLyBhjj"
           imageSrc='/assets/images/Apple_logo_white.svg'

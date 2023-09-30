@@ -186,6 +186,7 @@ body {
 .mainImage {
   max-width: none;
   max-height: 100vh;
+  min-height: 500px;
   margin-left: 50%;
   transform: translate(-50%);
 }
