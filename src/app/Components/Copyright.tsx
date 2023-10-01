@@ -1,6 +1,6 @@
 const Copyright = () => (
-  <div className="copywrite">
-    {`Copywrite © ${new Date().getFullYear()} Parley Games. All Rights Reserved.` }
+  <div className="copyright">
+    {`Copyright © ${new Date().getFullYear()} Parley Games. All Rights Reserved.` }
   </div>
 )
 
