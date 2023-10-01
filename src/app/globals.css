@@ -220,3 +220,14 @@ body {
   line-height: 25px; /* 178.571% */
   letter-spacing: 0.62px;
 }
+
+.heroWrapper{
+  min-width: 1400px;
+  width: 100vw; 
+  position: absolute; 
+  bottom: 0; 
+  height: 100%;  
+  align-self: 'center';
+  left: 50%;
+  transform: translateX(-50%);
+}
