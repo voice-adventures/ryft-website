@@ -222,7 +222,7 @@ body {
 }
 
 .heroWrapper{
-  min-width: 1400px;
+  /* min-width: 1400px; */
   width: 100vw; 
   position: absolute; 
   bottom: 0; 
@@ -230,4 +230,17 @@ body {
   align-self: 'center';
   left: 50%;
   transform: translateX(-50%);
+  width: max(calc(100vh*1814/1100), 100vw);
+  height:  max(calc(100vw*1100/1814), 100vh);
+
+
+}
+
+.background {
+  /* height:  max(calc(100vw*1100/1814), 100vh); */
+  /* width: 100vw; */
+  background: url('/assets/images/MANSION-background.webp');
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
 }

@@ -77,7 +77,6 @@ const Hero = () => {
 
   useEffect(() => {
     setVh(window.innerHeight)
-    console.log('innerheight', window.innerHeight)
     const loadImage = (image: string) => {
       return new Promise((resolve, reject) => {
         const loadImg = new Image()
@@ -115,8 +114,13 @@ const Hero = () => {
             }}
         >
         <div className={'heroWrapper'}>
+        {/* <img
+            style={{ minWidth: '100vw', maxWidth: 'none', minHeight: "100vh", position: 'relative'}}
+            src={IMAGES[0]}
+            alt="Ryft: A Timely Manor"
+        /> */}
         <img
-            style={{ minWidth: '100vw', minHeight: "100vh", position: 'absolute', bottom: 0}}
+            style={{ width: '100%', position: 'absolute', bottom: 0}}
             src={IMAGES[0]}
             alt="Ryft: A Timely Manor"
         />
@@ -127,7 +131,7 @@ const Hero = () => {
             scale={[1, 1.1]}
         >
             <img
-                style={{ position: 'absolute', bottom: '0', minWidth: '100vw' }}
+                style={{ position: 'absolute', bottom: '0', minWidth: '100vw', width: "100%" }}
                 src={IMAGES[1]}
                 alt="Ryft: A Timely Manor"
             />
@@ -139,7 +143,7 @@ const Hero = () => {
             scale={[1, 1.4]}
         >
             <img
-                style={{ position: 'absolute', bottom: 0, width: '100%', minWidth: '100vw' }}
+                style={{ position: 'absolute', bottom: 0, width: '100%', minWidth: '100vw', width: "100%" }}
                 src={IMAGES[2]}
                 alt="Ryft: A Timely Manor"
             />
@@ -152,7 +156,7 @@ const Hero = () => {
             translateX={['0px', '40px']}
         >
             <img
-            style={{ width: '100%', position: 'absolute', bottom: 0, minWidth: '100vw' }}
+            style={{ width: '100%', position: 'absolute', bottom: 0, minWidth: '100vw', width: "100%" }}
             src={IMAGES[3]}
             alt="Ryft: A Timely Manor"
             />
