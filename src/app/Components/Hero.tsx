@@ -143,7 +143,7 @@ const Hero = () => {
             scale={[1, 1.4]}
         >
             <img
-                style={{ position: 'absolute', bottom: 0, width: '100%', minWidth: '100vw', width: "100%" }}
+                style={{ position: 'absolute', bottom: 0, width: '100%', minWidth: '100vw' }}
                 src={IMAGES[2]}
                 alt="Ryft: A Timely Manor"
             />
@@ -156,7 +156,7 @@ const Hero = () => {
             translateX={['0px', '40px']}
         >
             <img
-            style={{ width: '100%', position: 'absolute', bottom: 0, minWidth: '100vw', width: "100%" }}
+            style={{ width: '100%', position: 'absolute', bottom: 0, minWidth: '100vw'}}
             src={IMAGES[3]}
             alt="Ryft: A Timely Manor"
             />
