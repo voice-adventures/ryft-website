@@ -238,7 +238,7 @@ body {
   margin-bottom: 200px;
 }
 
-@responsive {
+@layer components {
   .videoImageStubWrapper {
     width: 90vw;
     height: 55vw;
@@ -254,7 +254,7 @@ body {
   }
 }
 
-@responsive {
+@layer components {
   .videoImageStub {
     position: absolute;
     height: 55vw;
@@ -269,7 +269,7 @@ body {
   }
 }
 
-@responsive {
+@layer components {
   .video {
     width: 90vw;
     height: 54vw;
@@ -286,7 +286,8 @@ body {
     height: 42vw;
   }
 }
-@responsive {
+
+@layer components {
   .playIcon {
     position: absolute;
     top:50%;
