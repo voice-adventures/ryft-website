@@ -272,7 +272,7 @@ body {
 @layer components {
   .video {
     width: 90vw;
-    height: 54vw;
+    height: 55vw;
     margin: auto;
     z-index: 1000;
     bottom:0;
