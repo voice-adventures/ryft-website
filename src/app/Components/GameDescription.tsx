@@ -1,4 +1,5 @@
 import Copyright from "./Copyright"
+import Trailer from "./Trailer"
 
 const mainCopy = "Welcome to the Nexus Manor. A place that exists outside of time —and in between your ears. RYFT is an audio-based adventure game played with speech commands. Featuring a full voice cast, challenging puzzles, and a compelling narrative, this mystery game is powered by the world's greatest graphics engine: your imagination."
 const subHeaderCopy = "Navigate freely. Pick-up and combine items to solve puzzles. Chat with an eccentric cast of characters as you attempt to solve the mystery of the manor without ever lifting a finger."
@@ -27,6 +28,7 @@ const GameDescription = () => {
                 </div>
                 </div>
                 <div style={{width: '100%', height: '20vh'}} />
+                <Trailer />
                 <Copyright />
             </div>
         </div>

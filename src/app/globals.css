@@ -232,15 +232,89 @@ body {
   transform: translateX(-50%);
   width: max(calc(100vh*1814/1100), 100vw);
   height:  max(calc(100vw*1100/1814), 100vh);
+}
 
+.trailer {
+  margin-bottom: 200px;
+}
+
+@responsive {
+  .videoImageStubWrapper {
+    width: 90vw;
+    height: 55vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3vw;
+    margin: auto;
+  }
+
+  .videoImageStubWrapperLarge {
+    height: 42vw;
+    width: 69vw
+  }
+}
+
+@responsive {
+  .videoImageStub {
+    position: absolute;
+    height: 55vw;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .videoImageStubLarge {
+    height: 42vw;
+  }
+}
+
+@responsive {
+  .video {
+    width: 90vw;
+    height: 54vw;
+    margin: auto;
+    z-index: 1000;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .videoLarge {
+    width: 69vw;
+    height: 42vw;
+  }
+}
+@responsive {
+  .playIcon {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 12vw;
+    width: 12vw;
+    transform: translate(-50%,-50%);
+    color:red;
+  }
+
+  .playIconLarge {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 8vw;
+    width: 8vw;
+    transform: translate(-50%,-50%);
+    color:red;
+  }
 
 }
 
-.background {
+/* .background {
   /* height:  max(calc(100vw*1100/1814), 100vh); */
   /* width: 100vw; */
-  background: url('/assets/images/MANSION-background.webp');
+  /* background: url('/assets/images/MANSION-background.webp');
   background-size: cover;
   background-position: bottom;
   position: relative;
-}
+}  */
+
