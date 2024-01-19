@@ -292,8 +292,8 @@ body {
     position: absolute;
     top:50%;
     left: 50%;
-    height: 12vw;
-    width: 12vw;
+    height: 13vw;
+    width: 13vw;
     transform: translate(-50%,-50%);
     color:red;
   }

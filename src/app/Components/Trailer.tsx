@@ -8,7 +8,7 @@ const Trailer = () => {
             {showVideo ? 
                 <div className="videoImageStubWrapper sm:videoImageStubWrapperLarge">
                     <img className="videoImageStub sm:videoImageStubLarge " src={'/og.webp'} />
-                    <iframe src='https://www.youtube.com/embed/xgAXQGemVGc?autoplay=1'
+                    <iframe src='https://www.youtube.com/embed/uhbGH7txXug?autoplay=1'
                     className="video sm:videoLarge"
                     allow='autoplay; encrypted-media'
                     allowFullScreen
