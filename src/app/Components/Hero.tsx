@@ -232,12 +232,12 @@ const Hero = () => {
             </div>
             <div className='mx-auto w-1/2 flex-row flex gap-4 justify-center mt-10'>
                 <JoinButton
-                    url="https://testflight.apple.com/join/KcLyBhjj"
+                    url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
                     imageSrc='/assets/images/Apple_logo_white.svg'
                     altText="Join the beta"
                 />
                 <JoinButton
-                    url="https://drive.google.com/file/d/1wy-3Tj8WdIeYdQLU0R0eVWSl83GLPoFC/view?usp=drive_link"
+                    url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
                     imageSrc='/assets/images/Android_logo.png'
                     altText="Join the beta"
                 />
