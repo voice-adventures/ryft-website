@@ -9,16 +9,14 @@ const interFont = Inter({
   });
   
   
-const JoinButton = ({url, imageSrc, altText}:{url: string, imageSrc: string, altText: string}) => (
-    <Link href={url} className="buttonStyles">
-        <div className={`text-white text-base button-text ${interFont.className}`}>JOIN THE BETA</div>
-        <div className="relative flex-col justify-start items-start flex ml-2">
-            <img
-                className='w-6'
-                src={imageSrc}
-                alt={altText}
-            />
-        </div>
+const JoinButton = ({url, imageSrc, altText, className}:{url: string, imageSrc: string, altText: string, className: string}) => (
+    <Link href={url} >
+        <img
+            className='sm:h-16 sm:w-auto w-60 h-auto'
+            src={imageSrc}
+            alt={altText}
+            // style={style}
+        />
     </Link>
   )
 

@@ -54,16 +54,18 @@ const MobileHero = () => (
                             A TIMELY MANOR
                     </div>
                 </div>
-                <div className='mx-auto flex-col sm:flex-row flex gap-4 justify-center items-center mt-10'>
+                <div className='mx-auto flex-col sm:flex-row flex gap-7 justify-center items-center mt-10'>
                     <JoinButton
-                        url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
-                        imageSrc='/assets/images/Apple_logo_white.svg'
-                        altText="Join the beta"
-                    />
+                        url="https://apps.apple.com/app/ryft-a-timely-manor/id1661569093"
+                        imageSrc='/assets/images/Download_on_the_App_Store_Badge.svg'
+                        altText="Download on the App Store"
+                        // style={{margin: '6%', width: '88%'}}
+                        />
                     <JoinButton
-                        url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
-                        imageSrc='/assets/images/Android_logo.png'
-                        altText="Join the beta"
+                        url="https://play.google.com/store/apps/details?id=com.ryftgame.ryft"
+                        imageSrc='/assets/images/google-play-badge.png'
+                        altText="Download on the Google Play Store"
+                        // style={{padding: 1}}
                     />
                 </div>
             </div>
@@ -197,8 +199,8 @@ const Hero = () => {
         <ParallaxBannerLayer
             style={{ width: '100%', position: 'absolute', top: '25%', opacity: 0 }}
             shouldAlwaysCompleteAnimation
-            startScroll={600}
-            endScroll={900}
+            startScroll={500}
+            endScroll={800}
             opacity={[0, 1]}
         >
             <div
@@ -230,16 +232,18 @@ const Hero = () => {
                 A TIMELY MANOR
                 </div>
             </div>
-            <div className='mx-auto w-1/2 flex-row flex gap-4 justify-center mt-10'>
+            <div className='mx-auto w-1/2 flex-row flex gap-7 justify-center mt-10'>
                 <JoinButton
-                    url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
-                    imageSrc='/assets/images/Apple_logo_white.svg'
-                    altText="Join the beta"
+                    url="https://apps.apple.com/app/ryft-a-timely-manor/id1661569093"
+                    imageSrc='/assets/images/Download_on_the_App_Store_Badge.svg'
+                    altText="Download on the App Store"
+                    // style={{margin: '6%', width: '88%'}}
                 />
                 <JoinButton
-                    url="https://docs.google.com/forms/d/e/1FAIpQLSezBsjuQH06Ew-qaALLPJMI66W2X5md5E9tdu_bLpbq0FGSoA/viewform?usp=sf_link"
-                    imageSrc='/assets/images/Android_logo.png'
-                    altText="Join the beta"
+                    url="https://play.google.com/store/apps/details?id=com.ryftgame.ryft"
+                    imageSrc='/assets/images/google-play-badge.png'
+                    altText="Download on the Google Play Store"
+                    style={{padding: 1}}
                 />
             </div>
             </div>
