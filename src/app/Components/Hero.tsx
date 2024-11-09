@@ -59,13 +59,11 @@ const MobileHero = () => (
                         url="https://apps.apple.com/app/ryft-a-timely-manor/id1661569093"
                         imageSrc='/assets/images/Download_on_the_App_Store_Badge.svg'
                         altText="Download on the App Store"
-                        // style={{margin: '6%', width: '88%'}}
                         />
                     <JoinButton
                         url="https://play.google.com/store/apps/details?id=com.ryftgame.ryft"
                         imageSrc='/assets/images/google-play-badge.png'
                         altText="Download on the Google Play Store"
-                        // style={{padding: 1}}
                     />
                 </div>
             </div>
@@ -237,13 +235,11 @@ const Hero = () => {
                     url="https://apps.apple.com/app/ryft-a-timely-manor/id1661569093"
                     imageSrc='/assets/images/Download_on_the_App_Store_Badge.svg'
                     altText="Download on the App Store"
-                    // style={{margin: '6%', width: '88%'}}
                 />
                 <JoinButton
                     url="https://play.google.com/store/apps/details?id=com.ryftgame.ryft"
                     imageSrc='/assets/images/google-play-badge.png'
                     altText="Download on the Google Play Store"
-                    style={{padding: 1}}
                 />
             </div>
             </div>
