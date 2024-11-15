@@ -12,7 +12,7 @@ const interFont = Inter({
 const JoinButton = ({url, imageSrc, altText}:{url: string, imageSrc: string, altText: string}) => (
     <Link href={url} >
         <img
-            className='sm:h-16 sm:w-auto w-60 h-auto'
+            className='sm:h-16 sm:w-auto w-52 h-auto'
             src={imageSrc}
             alt={altText}
         />

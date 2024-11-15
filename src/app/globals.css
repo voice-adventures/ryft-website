@@ -86,7 +86,7 @@ body {
 
 .line {
   background-color: red;
-  height: 0.1rem;
+  height: 0.2rem;
   flex: 1;
   width: 60px;
   align-self: center;
@@ -115,8 +115,13 @@ body {
   font-weight: 400;
   line-height: 120%; /* 60px */
   letter-spacing: 8px;
-  padding: 90px 18px;
+  padding: 70px 18px;
   padding-bottom: 30px;
+}
+
+.socials {
+  position: absolute;
+  width:
 }
 
 .text {

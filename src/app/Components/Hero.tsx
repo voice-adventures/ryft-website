@@ -2,6 +2,7 @@ import { Libre_Baskerville, Kadwa } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import JoinButton from './JoinButton';
+import Socials from './Socials';
 
 // import background from ''
 // If loading a variable font, you don't need to specify the font weight
@@ -68,6 +69,7 @@ const MobileHero = () => (
                 </div>
             </div>
         </div>
+        <Socials />
     </div>
 )
 
@@ -243,11 +245,12 @@ const Hero = () => {
                 />
             </div>
             </div>
+            <Socials />
             </ParallaxBannerLayer>
             </div>
         </ParallaxBanner>
         
-        : null }
+        : <div className='w-full h-full bg-black'/> }
         
         </div>
     </div>

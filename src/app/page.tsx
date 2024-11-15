@@ -2,6 +2,7 @@
 import { ParallaxProvider } from 'react-scroll-parallax';
 import GameDescription from './Components/GameDescription';
 import Hero from './Components/Hero';
+import Socials from './Components/Socials';
 
 
 export default function Home() {
